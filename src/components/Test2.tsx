@@ -3,17 +3,6 @@ type Test2Props = {
 }
 
 const Test2 = (props: Test2Props) => {
-  if (true) {
-    if (true) {
-      if (true) {
-        if (true) {
-          if (true) {
-            const x = 1
-          }
-        }
-      }
-    }
-  }
   return <div>{props.msg}</div>
 }
 

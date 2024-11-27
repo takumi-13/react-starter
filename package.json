@@ -6,9 +6,20 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-pattern .gitignore",
+    "lint:preCommit": "eslint --ignore-pattern .gitignore",
+    "fmt:preCommit": "prettier"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,vue}": "npm run lint:preCommit",
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,vue}": "npm run fmt:preCommit"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "dependencies": {
     "react": "^18.3.1",
