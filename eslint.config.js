@@ -7,14 +7,6 @@ import tseslint from 'typescript-eslint'
 export default tseslint.config(
   { ignores: ['dist'] },
   {
-    root: true,
-    env: {
-      browser: true,
-      jest: true,
-      node: true,
-    },
-  },
-  {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
