@@ -1,10 +1,10 @@
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction } from 'react'
 
 type Test1Props = {
-  count: number;
-  msg: String;
-  setCount: Dispatch<SetStateAction<number>>;
-};
+  count: number
+  msg: string
+  setCount: Dispatch<SetStateAction<number>>
+}
 const Test1 = (props: Test1Props) => {
   return (
     <div className="m-4">
@@ -17,7 +17,7 @@ const Test1 = (props: Test1Props) => {
         add Test1
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default Test1;
+export default Test1
